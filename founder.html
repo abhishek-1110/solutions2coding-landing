@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Founder | Solutions2Coding</title>
+    <meta
+      name="description"
+      content="Meet the founder of Solutions2Coding and learn the mission behind this coding and software engineering platform."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a href="./index.html" class="brand">solutions2coding</a>
+        <div class="nav-links">
+          <a href="./index.html#latest-posts">Latest Posts</a>
+          <a href="./index.html#topics">Topics</a>
+          <a href="./index.html#write">Write For Us</a>
+          <a href="./submit-article.html">Submit Article</a>
+          <a href="./founder.html">Founder</a>
+        </div>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+            Dark Mode
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container founder-grid">
+          <div class="founder-profile">
+            <div class="founder-photo-wrap">
+              <img
+                class="founder-photo"
+                src="./assets/founder-photo.jpg"
+                onerror="this.onerror=null;this.src='./assets/founder-photo.svg';"
+                alt="Founder portrait of Abhishek Raj"
+              />
+            </div>
+            <p class="eyebrow">Founder</p>
+            <h1>Abhishek Raj</h1>
+            <p class="article-paragraph">
+              Builder, engineer, and educator behind Solutions2Coding. The goal is simple: publish practical
+              coding content that helps developers become job-ready and production-ready.
+            </p>
+            <div class="post-meta">
+              <span class="post-badge">Software Engineering</span>
+              <span class="post-badge">Backend & Architecture</span>
+              <span class="post-badge">Developer Education</span>
+            </div>
+          </div>
+          <aside class="founder-card">
+            <h2>Core Mission</h2>
+            <p class="article-paragraph">
+              Make quality software engineering education accessible through clear, implementation-first articles,
+              deep explanations, and real code examples.
+            </p>
+            <a class="btn btn-primary" href="./submit-article.html">Collaborate / Submit Article</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-highlight">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Founder Journey</p>
+            <h2>Why Solutions2Coding was started</h2>
+          </div>
+          <div class="founder-timeline">
+            <article class="timeline-item">
+              <h3>Learning Gap Identified</h3>
+              <p class="article-paragraph">
+                Many developers can read theory but struggle to apply concepts in real projects and interviews.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <h3>Content-First Platform Built</h3>
+              <p class="article-paragraph">
+                Solutions2Coding was launched to explain complex topics in simple language with practical examples.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <h3>Community-Led Growth</h3>
+              <p class="article-paragraph">
+                The platform now focuses on expanding with community submissions, deeper tutorials, and real-world guides.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container founder-expertise">
+          <div class="section-head">
+            <p class="eyebrow">Focus Areas</p>
+            <h2>Topics the founder actively writes on</h2>
+          </div>
+          <div class="expertise-grid">
+            <article class="expertise-card">
+              <h3>Backend Engineering</h3>
+              <p class="article-paragraph">
+                APIs, architecture patterns, authentication, scalability, caching, and production reliability.
+              </p>
+            </article>
+            <article class="expertise-card">
+              <h3>Interview Preparation</h3>
+              <p class="article-paragraph">
+                Structured roadmaps and focused preparation for backend and full-stack interviews.
+              </p>
+            </article>
+            <article class="expertise-card">
+              <h3>System Design</h3>
+              <p class="article-paragraph">
+                Practical design walkthroughs for real systems with tradeoffs and implementation strategies.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Solutions2Coding</p>
+        <p>Coding Articles, Tutorials, and Engineering Insights</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/js/founder.js"></script>
+  </body>
+</html>

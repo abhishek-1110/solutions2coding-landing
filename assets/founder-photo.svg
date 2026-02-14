@@ -1,0 +1,14 @@
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="60" y1="40" x2="650" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D9A8A"/>
+      <stop offset="1" stop-color="#0E534C"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="720" rx="40" fill="url(#bg)"/>
+  <circle cx="360" cy="270" r="110" fill="#C9F7F0" fill-opacity="0.95"/>
+  <path d="M180 600C180 502.798 258.798 424 356 424H364C461.202 424 540 502.798 540 600V610H180V600Z" fill="#C9F7F0" fill-opacity="0.95"/>
+  <text x="360" y="660" text-anchor="middle" fill="#E9FFFB" font-family="Manrope, Arial, sans-serif" font-size="38" font-weight="700">
+    Abhishek Raj
+  </text>
+</svg>

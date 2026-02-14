@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions2Coding | Coding Articles & Tutorials</title>
+    <meta
+      name="description"
+      content="Solutions2Coding is a coding blog with practical tutorials, backend guides, frontend tips, and interview-focused software engineering content."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a href="#" class="brand">solutions2coding</a>
+        <div class="nav-links">
+          <a href="#latest-posts">Latest Posts</a>
+          <a href="#topics">Topics</a>
+          <a href="#about">About</a>
+          <a href="#write">Write For Us</a>
+          <a href="./submit-article.html">Submit Article</a>
+          <a href="./founder.html">Founder</a>
+        </div>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+            Dark Mode
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Online Blogging Platform</p>
+            <h1 id="hero-title">Practical coding guides for developers who build real products.</h1>
+            <p>
+              Solutions2Coding publishes backend, frontend, architecture, and interview-focused articles
+              that help developers write clean, scalable, production-ready code.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#latest-posts">Read Latest Articles</a>
+              <a class="btn btn-ghost" href="./submit-article.html">Publish With Us</a>
+              <button id="random-article-btn" class="btn btn-secondary" type="button">Surprise Me</button>
+            </div>
+          </div>
+          <aside class="hero-panel reveal">
+            <h2>Find What You Need</h2>
+            <label for="search-posts" class="search-label">Search articles</label>
+            <input id="search-posts" type="search" placeholder="e.g. ASP.NET JWT, React performance..." />
+            <p class="shortcut-hint">Shortcut: press <kbd>/</kbd> to focus search</p>
+            <div class="streak-widget">
+              <h3>Developer Streak</h3>
+              <div class="streak-stats">
+                <p><strong id="streak-current">0</strong> day current</p>
+                <p><strong id="streak-best">0</strong> day best</p>
+                <p><strong id="streak-total">0</strong> articles completed</p>
+              </div>
+            </div>
+            <ul class="quick-points">
+              <li>Step-by-step coding tutorials</li>
+              <li>System design and backend best practices</li>
+              <li>Interview prep and project architecture articles</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="latest-posts" class="section container">
+        <div class="layout-grid">
+          <aside id="topics" class="sidebar reveal">
+            <h2>Topics</h2>
+            <div id="category-list" class="category-list"></div>
+            <div class="sidebar-card">
+              <h3>Popular Tags</h3>
+              <div class="tags">
+                <span>.NET</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Architecture</span>
+                <span>Interview Prep</span>
+                <span>Performance</span>
+              </div>
+            </div>
+          </aside>
+
+          <div class="posts-area">
+            <div class="section-head reveal">
+              <p class="eyebrow">Latest Coding Articles</p>
+              <h2>New posts from Solutions2Coding</h2>
+              <p id="results-count" class="muted-text"></p>
+            </div>
+            <div id="posts-grid" class="posts-grid"></div>
+            <button id="load-more" class="btn btn-secondary load-more" type="button">Load More Articles</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="saved-posts" class="section container">
+        <div class="section-head">
+          <p class="eyebrow">Your Reading List</p>
+          <h2>Saved Articles</h2>
+          <p id="saved-results-count" class="muted-text"></p>
+        </div>
+        <div id="saved-posts-grid" class="posts-grid"></div>
+      </section>
+
+      <section id="about" class="section section-highlight">
+        <div class="container about-grid">
+          <div class="reveal">
+            <p class="eyebrow">About Solutions2Coding</p>
+            <h2>Built for engineers, learners, and builders</h2>
+            <p>
+              We share coding tutorials and software engineering articles focused on practical implementation.
+              Every post is written to be directly useful in interviews, project work, or production systems.
+            </p>
+          </div>
+          <div class="about-card reveal">
+            <h3>What You’ll Get</h3>
+            <ul>
+              <li>Clear explanations with code-first examples</li>
+              <li>Guides that map directly to real projects</li>
+              <li>Actionable insights for career and growth</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="write" class="section container">
+        <div class="write-card reveal">
+          <div>
+            <p class="eyebrow">Write For Us</p>
+            <h2>Got a coding story or technical tutorial?</h2>
+            <p>
+              Share your article with the Solutions2Coding community. We welcome tutorials, architecture
+              explainers, debugging guides, and developer experience lessons.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="./submit-article.html">
+            Submit Your Article Idea
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Solutions2Coding</p>
+        <p>Coding Articles, Tutorials, and Engineering Insights</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
