@@ -59,37 +59,8 @@ randomArticleButton?.addEventListener("click", () => {
   }
 });
 
-postsGrid?.addEventListener("click", (event) => {
-  const bookmarkButton = event.target.closest(".bookmark-btn");
-  if (!bookmarkButton) {
-    return;
-  }
-
-  const slug = bookmarkButton.getAttribute("data-bookmark-slug");
-  if (!slug) {
-    return;
-  }
-
-  toggleBookmark(slug);
-  renderPosts();
-  renderSavedPosts();
-});
-
-savedPostsGrid?.addEventListener("click", (event) => {
-  const bookmarkButton = event.target.closest(".bookmark-btn");
-  if (!bookmarkButton) {
-    return;
-  }
-
-  const slug = bookmarkButton.getAttribute("data-bookmark-slug");
-  if (!slug) {
-    return;
-  }
-
-  toggleBookmark(slug);
-  renderPosts();
-  renderSavedPosts();
-});
+wireGridInteractions(postsGrid);
+wireGridInteractions(savedPostsGrid);
 
 document.addEventListener("keydown", (event) => {
   const isTypingInInput =
@@ -228,7 +199,13 @@ function renderSavedPosts() {
 function renderPostCard(post) {
   const isSaved = bookmarkedSlugs.has(post.slug);
   return `
-    <article class="post-card reveal">
+    <article
+      class="post-card reveal clickable-card"
+      data-article-slug="${post.slug}"
+      role="link"
+      tabindex="0"
+      aria-label="Open article ${post.title}"
+    >
       <div class="post-meta">
         <span class="post-badge">${post.category}</span>
         <span class="post-badge">${post.readTime}</span>
@@ -244,6 +221,48 @@ function renderPostCard(post) {
       </div>
     </article>
   `;
+}
+
+function wireGridInteractions(gridElement) {
+  gridElement?.addEventListener("click", (event) => {
+    const bookmarkButton = event.target.closest(".bookmark-btn");
+    if (bookmarkButton) {
+      const slug = bookmarkButton.getAttribute("data-bookmark-slug");
+      if (!slug) {
+        return;
+      }
+
+      toggleBookmark(slug);
+      renderPosts();
+      renderSavedPosts();
+      return;
+    }
+
+    const card = event.target.closest(".post-card");
+    const slug = card?.getAttribute("data-article-slug");
+    if (slug) {
+      openArticle(slug);
+    }
+  });
+
+  gridElement?.addEventListener("keydown", (event) => {
+    const card = event.target.closest(".post-card");
+    if (!card) {
+      return;
+    }
+
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      const slug = card.getAttribute("data-article-slug");
+      if (slug) {
+        openArticle(slug);
+      }
+    }
+  });
+}
+
+function openArticle(slug) {
+  window.location.href = `./article.html?slug=${encodeURIComponent(slug)}`;
 }
 
 function toggleBookmark(slug) {

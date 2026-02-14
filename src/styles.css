@@ -404,6 +404,15 @@ kbd {
   box-shadow: 0 8px 22px rgba(16, 40, 36, 0.06);
 }
 
+.clickable-card {
+  cursor: pointer;
+}
+
+.clickable-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .post-meta {
   display: flex;
   gap: 0.45rem;
